@@ -72,6 +72,7 @@ struct ContentView: View {
                             
                             Button(action: {
                                 // tap
+                                print("구단주명 변경 Tab")
                                 
                             }) {
                                 Text("변경")

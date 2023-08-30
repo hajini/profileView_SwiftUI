@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SquadListContainer: View {
+    
+    let grColorsArr = ["https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l1477.png", ""]
+    let spColorsArr = ["https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l9.png", "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l2052.png", "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l241.png"]
+    
     var body: some View {
         HStack{
             Spacer()
@@ -21,32 +25,49 @@ struct SquadListContainer: View {
                 
                 HStack(alignment: .center) {
                     Spacer()
-                        TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l1477.png")
-                        TeamcolorImageView(imageUrl: "")
-                        
-                        TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l9.png")
-                        TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l1831.png")
-                        TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l241.png")
+                    Text("소속")
+                        .font(.system(size: 16))
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    ForEach(grColorsArr, id: \.self) { url in
+                        TeamcolorImageView(imageUrl: url)
+                    }
+                    Spacer()
+                    Text("특성")
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    ForEach(spColorsArr, id: \.self) { url in
+                        TeamcolorImageView(imageUrl: url)
+                    }
                     Spacer()
                 }
                 
                 
                 HStack {
+                    Spacer()
+                    Text("2조 5000억 BP")
+                        .font(.system(size: 16))
+                        .fontWeight(.bold)
+                        .foregroundColor(.orange)
+                    Spacer()
+                }
+                HStack {
                     AsyncImage(url: URL(string: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersActionHigh/p287231677.png?rd=202308291050")) { image in
                         image
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20, alignment: .top)
+                            .frame(width: 24, height: 24, alignment: .top)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).foregroundColor(Color(red: 203/255.0, green: 203/255.0, blue: 203/255.0)))
                     } placeholder: {
                         Image("emptyImg")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20, alignment: .top)
+                            .frame(width: 24, height: 24, alignment: .top)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).foregroundColor(.gray))
                     }
+                    
                     
                     Text("뮌헨김뮌재케인")
                         .foregroundColor(.gray)
@@ -69,8 +90,6 @@ struct SquadListContainer: View {
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                         .bold()
-                    Image("")
-                        .frame(width: 12, height: 12)
                     
                 }
             }
