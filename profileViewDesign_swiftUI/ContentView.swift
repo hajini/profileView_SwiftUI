@@ -12,12 +12,13 @@ struct ContentView: View {
     @State var img = "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersActionHigh/p287231677.png?rd=202308291050"
     var image02 = "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersActionHigh/p287231677.png?rd=202308291050"
     
+    //red, green, blue, purple, black, orange, yellow, pink, brown, cyan, mint, teal, indigo
     
     var body: some View {
         NavigationStack {
             VStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [.white, .yellow]),
+                    gradient: Gradient(colors: [.white, .purple]),
                     startPoint: .topLeading, endPoint: .bottomTrailing
                 )
                 .frame(height: 200)
@@ -27,7 +28,7 @@ struct ContentView: View {
                         img = image02
                     } else {
                         img = ""
-                        //
+                        
                     }
                 } label: {
                     ProfileImage(imageUrl: img, changeButton: true)

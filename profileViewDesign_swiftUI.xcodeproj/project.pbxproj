@@ -13,6 +13,8 @@
 		F7B0C7D72A9DAAEA00CF8367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B0C7D62A9DAAEA00CF8367 /* Preview Assets.xcassets */; };
 		F7B0C7DE2A9DAB0400CF8367 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0C7DD2A9DAB0400CF8367 /* ProfileImage.swift */; };
 		F7B0C7E12A9DAB2400CF8367 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F7B0C7E02A9DAB2400CF8367 /* Kingfisher */; };
+		F7B0C7E82A9F02C600CF8367 /* SquadListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0C7E72A9F02C600CF8367 /* SquadListContainer.swift */; };
+		F7B0C7EA2A9F1AC000CF8367 /* TeamcolorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0C7E92A9F1AC000CF8367 /* TeamcolorImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F7B0C7D32A9DAAEA00CF8367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B0C7D62A9DAAEA00CF8367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7B0C7DD2A9DAB0400CF8367 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		F7B0C7E72A9F02C600CF8367 /* SquadListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadListContainer.swift; sourceTree = "<group>"; };
+		F7B0C7E92A9F1AC000CF8367 /* TeamcolorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamcolorImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				F7B0C7D32A9DAAEA00CF8367 /* Assets.xcassets */,
 				F7B0C7D52A9DAAEA00CF8367 /* Preview Content */,
 				F7B0C7DD2A9DAB0400CF8367 /* ProfileImage.swift */,
+				F7B0C7E72A9F02C600CF8367 /* SquadListContainer.swift */,
+				F7B0C7E92A9F1AC000CF8367 /* TeamcolorImageView.swift */,
 			);
 			path = profileViewDesign_swiftUI;
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B0C7E82A9F02C600CF8367 /* SquadListContainer.swift in Sources */,
 				F7B0C7D22A9DAAE800CF8367 /* ContentView.swift in Sources */,
+				F7B0C7EA2A9F1AC000CF8367 /* TeamcolorImageView.swift in Sources */,
 				F7B0C7DE2A9DAB0400CF8367 /* ProfileImage.swift in Sources */,
 				F7B0C7D02A9DAAE800CF8367 /* profileViewDesign_swiftUIApp.swift in Sources */,
 			);
