@@ -11,34 +11,22 @@ struct SquadListContainer: View {
     var body: some View {
         HStack{
             Spacer()
-            LazyVStack(alignment: .leading, spacing: 10) {
+            LazyVStack(alignment: .center, spacing: 10) {
                 //                        Spacer(minLength: 0.3)
+                
                 Text("스페인스쿼드")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                     .lineLimit(1)
                 
                 HStack(alignment: .center) {
-                    HStack {
+                    Spacer()
                         TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l1477.png")
                         TeamcolorImageView(imageUrl: "")
                         
                         TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l9.png")
                         TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l1831.png")
                         TeamcolorImageView(imageUrl: "https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/teamcolorboost/icon/medium/4_l241.png")
-                        
-                        Spacer()
-                        Image("down02")
-                            .renderingMode(.template)
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.gray)
-                            .frame(width: 16, height: 16)
-                        Text("3")
-                            .font(.system(size: 18))
-                            .bold()
-                    }
-                    
                     Spacer()
                 }
                 
@@ -65,17 +53,24 @@ struct SquadListContainer: View {
                         .font(.system(size: 14))
                         .fontWeight(.regular)
                         .frame(alignment: .bottom)
-                    Spacer()
+                    
                     Text("방금전")
                         .font(.system(size: 10))
                         .foregroundColor(.gray)
                         .fontWeight(.thin)
-//                    Image("ground_icon")
-//                        .renderingMode(.template)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .foregroundColor(.gray)
-//                        .frame(width: 12, height: 12)
+                    Spacer()
+                    Image("down02")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.gray)
+                        .frame(width: 14, height: 14)
+                    Text("3")
+                        .font(.system(size: 14))
+                        .foregroundColor(.gray)
+                        .bold()
+                    Image("")
+                        .frame(width: 12, height: 12)
                     
                 }
             }

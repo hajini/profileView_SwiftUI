@@ -20,16 +20,28 @@ struct TeamcolorImageView: View {
             image
                 .resizable()
                 .scaledToFit()
+                .padding(4)
                 .frame(width: 35, height: 35, alignment: .top)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).foregroundColor(Color(red: 203/255.0, green: 203/255.0, blue: 203/255.0)))
+//                .clipShape(RoundedRectangle(cornerRadius: 8))
+//                .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).foregroundColor(Color(red: 203/255.0, green: 203/255.0, blue: 203/255.0)))
+                .background(.background)
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 2)
+                }
+                .shadow(radius: 5)
         } placeholder: {
-            Image("empty")
+            Image("question_gray")
                 .resizable()
                 .scaledToFit()
+                .padding(7)
                 .frame(width: 35, height: 35, alignment: .top)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).foregroundColor(Color(red: 203/255.0, green: 203/255.0, blue: 203/255.0)))
+                .background(.background)
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 2)
+                }
+                .shadow(radius: 5)
         }
     }
 }
